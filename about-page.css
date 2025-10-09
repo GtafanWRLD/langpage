@@ -1,0 +1,387 @@
+/* Additional CSS specifically for About Page */
+/* Add this as a separate stylesheet or append to styles.css */
+
+/* Override Team Section for About Page */
+.team-section {
+    padding: 4rem 1rem;
+    background: var(--background-secondary);
+}
+
+.team-section .container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: var(--text-secondary);
+    max-width: 90%;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* Force single column layout for team grid */
+.team-grid {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.team-member:last-child {
+    margin-bottom: 0;
+}
+
+.team-member::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-gradient);
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.member-avatar {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(102, 126, 234, 0.5);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+    display: block;
+}
+
+.avatar-placeholder {
+    width: 110px;
+    height: 110px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.member-info {
+    width: 100%;
+}
+
+.member-info h3 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.member-role {
+    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.member-description {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding: 0 0.5rem;
+}
+
+.member-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.7rem 1.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-color);
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-link svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 4rem 1rem;
+    background: var(--background-primary);
+}
+
+.mission-section .container {
+    max-width: 100%;
+}
+
+.mission-section h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.mission-text .lead {
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.mission-text p {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.mission-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.75rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.stat-number {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    font-weight: 800;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Community Section */
+.community-section {
+    padding: 4rem 1rem;
+    background: var(--background-secondary);
+}
+
+.community-section .container {
+    max-width: 100%;
+}
+
+.community-section h2 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cta-btn.primary {
+    background: var(--primary-gradient);
+    color: var(--text-primary);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.cta-btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+}
+
+.cta-btn.secondary:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-color);
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.cta-btn .icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Tablet and larger */
+@media (min-width: 600px) {
+    .team-section {
+        padding: 5rem 2rem;
+    }
+
+    .team-member {
+        padding: 2.5rem 2rem;
+    }
+
+    .avatar-image,
+    .avatar-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+
+    .member-description {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .mission-stats {
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .stat-item {
+        flex: 1;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .cta-btn {
+        flex: 1;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .section-intro {
+        max-width: 700px;
+    }
+
+    .mission-content {
+        padding: 0 2rem;
+    }
+
+    .cta-buttons {
+        padding: 0 2rem;
+    }
+}
