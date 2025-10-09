@@ -33,7 +33,7 @@
     padding: 0 1rem;
 }
 
-/* Force single column layout for team grid */
+/* Force single column layout for team grid on mobile */
 .team-grid {
     display: block;
     width: 100%;
@@ -331,7 +331,7 @@
     flex-shrink: 0;
 }
 
-/* Tablet and larger */
+/* Tablet and larger - restore triangle layout */
 @media (min-width: 600px) {
     .team-section {
         padding: 5rem 2rem;
@@ -371,8 +371,27 @@
     }
 }
 
-/* Desktop */
+/* Desktop - Triangle layout (2 on top, 1 centered below) */
 @media (min-width: 1024px) {
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        max-width: 1000px;
+        padding: 0 2rem;
+    }
+
+    .team-member {
+        margin-bottom: 0;
+    }
+
+    .team-member:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
     .section-intro {
         max-width: 700px;
     }
